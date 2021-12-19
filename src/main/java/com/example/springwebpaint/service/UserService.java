@@ -1,6 +1,5 @@
 package com.example.springwebpaint.service;
 
-import com.example.springwebpaint.domain.User;
 import com.example.springwebpaint.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

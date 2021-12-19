@@ -19,13 +19,12 @@ public class BoardController {
     private BoardRepo boardRepo;
 
     @GetMapping("/board")
-    public String main(@RequestParam(required = true) Integer id,
+    public String main(Integer id,
                        Map<String, Object> model) {
         Board board = boardRepo.findById(id);
         if(board == null) {
             throw new ResponseStatusException(NOT_FOUND, "Unable to find the board");
         }
-//        Board board = boardRepo.findByUser_id(board_id);
         model.put("board", board);
         return "board";
     }

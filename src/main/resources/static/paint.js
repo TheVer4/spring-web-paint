@@ -63,10 +63,7 @@ const drawText = ({coords, text, color, id}) => {
         name: 'text',
     });
 
-    // simpleLabel.add(kText);
-
     layer.add(kText);
-    // simpleLabel.draw();
 };
 
 const contents = [];
