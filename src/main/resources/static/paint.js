@@ -93,7 +93,6 @@ stage.on('mousedown.select', (e) => {
         for(let listener of listeners) {
             container.removeEventListener('keydown', listener);
         }
-        return;
     }
     else {
         tr.nodes([drawing]);
@@ -104,8 +103,6 @@ stage.on('mousedown.select', (e) => {
                 console.log(drawing);
                 requestDeleteDrawing(drawing.attrs.id)
                 tr.nodes([]);
-            } else {
-                return;
             }
         };
         for(let listener of listeners) {
@@ -116,7 +113,7 @@ stage.on('mousedown.select', (e) => {
     }
 });
 
-const click_add_line = (event) => {
+const click_add_line = () => {
     document.getElementById("addLine").disabled = true;
     stage.on('mousedown.addline', (evtStr, callback) => {
         let mousePos = stage.getPointerPosition();
@@ -137,7 +134,7 @@ const click_add_line = (event) => {
     console.log("begin line drawing");
 }
 
-const click_add_text = (event) => {
+const click_add_text = () => {
     stage.on('mousedown.addtext', (evtStr, callback) => {
         let mousePos = stage.getPointerPosition();
         let newClicks = [mousePos.x, mousePos.y];
@@ -159,7 +156,7 @@ const clear_canvas = () => {
     layer.add(tr);
 }
 
-const click_clear_canvas = (event) => {
+const click_clear_canvas = () => {
     requestDeleteAllDrawings();
     clear_canvas();
     requestDrawingsList();
@@ -202,7 +199,7 @@ const requestCreateDrawing = async (data) => {
         headers: { "Accept": "application/json" },
         body: form,
     });
-    // requestDrawingsList(BOARD_ID); //TODO remove
+    if(response.ok) {}
 };
 
 const requestDeleteDrawing = async (drawing_id) => {
@@ -213,7 +210,7 @@ const requestDeleteDrawing = async (drawing_id) => {
         headers: { "Accept": "application/json" },
         body: form,
     });
-    // requestDrawingsList(BOARD_ID); //TODO remove
+    if(response.ok) {}
 };
 
 const requestDeleteAllDrawings = async () => {
@@ -224,7 +221,7 @@ const requestDeleteAllDrawings = async () => {
         headers: { "Accept": "application/json" },
         body: form,
     });
-    // requestDrawingsList(BOARD_ID); //TODO remove
+    if(response.ok) {}
 };
 
 document.getElementById("addLine").addEventListener("click", click_add_line);
