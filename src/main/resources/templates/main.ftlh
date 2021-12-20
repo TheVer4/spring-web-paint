@@ -3,11 +3,12 @@
 <@c.page>
     <@lf.logout/>
     <form method="post">
-        <input type="text" name="boardName" placeholder="Введите название доски">
-        <input type="hidden" name="_csrf" value="${ _csrf.token }">
-        <input type="submit" value="Создать">
+        <input type="text" name="boardName" placeholder="Введите название доски"/>
+        <input type="hidden" name="_csrf" value="${ _csrf.token }"/>
+        <input type="submit" value="Создать"/>
     </form>
     <div>Список досок:</div>
+    <div id="board-list">
     <#list boards as board>
         <div>
             <b>${board.id}</b>
@@ -17,4 +18,5 @@
         <#else>
         No any boards created yet
     </#list>
+    </div>
 </@c.page>

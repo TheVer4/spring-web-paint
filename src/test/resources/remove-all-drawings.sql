@@ -1,0 +1,1 @@
+delete from drawing where 1 = 1;
