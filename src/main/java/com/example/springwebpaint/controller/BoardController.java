@@ -2,13 +2,12 @@ package com.example.springwebpaint.controller;
 
 import com.example.springwebpaint.domain.Board;
 import com.example.springwebpaint.loggers.EventLogger;
-import com.example.springwebpaint.loggers.beans.Event;
-import com.example.springwebpaint.loggers.beans.EventType;
+import com.example.springwebpaint.loggers.event.Event;
+import com.example.springwebpaint.loggers.event.EventType;
 import com.example.springwebpaint.repos.BoardRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.servlet.http.HttpServletRequest;

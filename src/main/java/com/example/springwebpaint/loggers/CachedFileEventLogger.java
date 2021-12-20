@@ -1,6 +1,6 @@
 package com.example.springwebpaint.loggers;
 
-import com.example.springwebpaint.loggers.beans.Event;
+import com.example.springwebpaint.loggers.event.Event;
 
 import javax.annotation.PreDestroy;
 import java.util.ArrayList;
@@ -8,8 +8,8 @@ import java.util.List;
 
 public class CachedFileEventLogger extends FileEventLogger{
 
-    private int cacheSize;
-    private List<Event> cache;
+    private final int cacheSize;
+    private final List<Event> cache;
 
     public CachedFileEventLogger(String filename, int cacheSize) {
         super(filename);
@@ -35,6 +35,6 @@ public class CachedFileEventLogger extends FileEventLogger{
     }
 
     private void writeEventsFromCache() {
-        this.cache.stream().forEach(super::logEvent);
+        this.cache.forEach(super::logEvent);
     }
 }

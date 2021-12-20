@@ -1,6 +1,6 @@
 package com.example.springwebpaint.loggers;
 
-import com.example.springwebpaint.loggers.beans.Event;
+import com.example.springwebpaint.loggers.event.Event;
 
 public interface EventLogger {
 

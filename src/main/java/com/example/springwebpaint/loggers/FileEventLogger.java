@@ -1,6 +1,6 @@
 package com.example.springwebpaint.loggers;
 
-import com.example.springwebpaint.loggers.beans.Event;
+import com.example.springwebpaint.loggers.event.Event;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +14,7 @@ public class FileEventLogger extends AbstractLogger{
 
     private File file;
 
-    private String filename;
+    private final String filename;
 
     public FileEventLogger(String filename) {
         this.filename = filename;

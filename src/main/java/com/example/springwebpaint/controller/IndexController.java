@@ -1,8 +1,8 @@
 package com.example.springwebpaint.controller;
 
 import com.example.springwebpaint.loggers.EventLogger;
-import com.example.springwebpaint.loggers.beans.Event;
-import com.example.springwebpaint.loggers.beans.EventType;
+import com.example.springwebpaint.loggers.event.Event;
+import com.example.springwebpaint.loggers.event.EventType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
