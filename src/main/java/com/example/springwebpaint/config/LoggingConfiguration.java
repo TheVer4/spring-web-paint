@@ -10,7 +10,7 @@ public class LoggingConfiguration {
 
     @Bean
     public EventLogger getEventLogger() {
-        return new CachedFileEventLogger("target/events_log.txt", 5);
+        return new CachedFileEventLogger("rapidograph.log", 5);
     }
 
 }

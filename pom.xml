@@ -10,9 +10,9 @@
     </parent>
     <groupId>com.example</groupId>
     <artifactId>spring-web-paint</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>spring-web-paint</name>
-    <description>spring-web-paint</description>
+    <version>1.0.3</version>
+    <name>rapidograph</name>
+    <description>A web application for simple public drawing and markup</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -59,12 +59,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
@@ -73,14 +67,14 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
-            <version>RELEASE</version>
+            <version>5.5.1</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.6</version>
+            <version>2.11.0</version>
         </dependency>
     </dependencies>
 
