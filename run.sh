@@ -1,3 +1,3 @@
 #!/bin/bash
-
-java-jar target/$(ls target | grep .jar$)
+EXEC_JAR=$(ls target | grep .jar$)
+java -jar "target/$EXEC_JAR"
